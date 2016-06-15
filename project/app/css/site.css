@@ -1,0 +1,75 @@
+/*body{
+  background-color: #EEE;
+}
+#content_area{
+  background-color: #fff;
+  height: 100%;
+}
+@media screen and (min-width: 1200px) {
+  #content_area{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #content_area{
+  }
+}*/
+
+html,body {
+	height:100%;
+}
+
+.datepicker__input-container{
+	display: inline;
+}
+
+.bordered{
+  border: 1px solid #EEE;
+  border-radius: 3px;
+}
+
+.col-panel{
+  padding: 10px;
+  margin: 10px;
+}
+
+.row-flex, .row-flex > div[class*='col-'] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
+
+.row-flex-wrap {
+	-webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex:0;
+}
+
+.no-margin{
+	margin: 0;
+}
+
+/*.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+	 margin:-.2px; /* hack adjust for wrapping */
+}*/
+
+.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+	width:100%;
+}
+
+.col-flex {
+    display: flex;
+    display: -webkit-flex;
+    flex: 1 100%;
+	flex-flow: column nowrap;
+}
+
+.flex-grow {
+	display: flex;
+    -webkit-flex: 2;
+    flex: 2;
+}

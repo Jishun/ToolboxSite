@@ -1,0 +1,52 @@
+{
+  "jspm": {
+    "dependencies": {
+      "classnames": "npm:classnames@^2.2.1",
+      "css": "github:systemjs/plugin-css@^0.1.20",
+      "firebase": "github:firebase/firebase-bower@^2.3.2",
+      "history": "npm:history@^1.17.0",
+      "isomorphic-fetch": "npm:isomorphic-fetch@^2.2.0",
+      "json": "github:systemjs/plugin-json@^0.1.0",
+      "lodash": "npm:lodash@^3.10.1",
+      "moment": "npm:moment@^2.11.0",
+      "react": "npm:react@^15.1.0",
+      "react-addons-css-transition-group": "npm:react-addons-css-transition-group@^0.14.5",
+      "react-bootstrap": "npm:react-bootstrap@^0.28.1",
+      "react-checkbox-group": "npm:react-checkbox-group@^0.3.1",
+      "react-datepicker": "npm:react-datepicker@^0.17.0",
+      "react-dom": "npm:react-dom@^15.1.0",
+      "react-loader-advanced": "npm:react-loader-advanced@^0.7.0",
+      "react-localstorage": "npm:react-localstorage@^0.2.8",
+      "react-motion-ui-pack": "npm:react-motion-ui-pack@^0.5.2",
+      "react-redux": "npm:react-redux@^4.0.6",
+      "react-router": "npm:react-router@^1.0.0",
+      "react-validated-input": "npm:react-validated-input@0.0.3",
+      "redux": "npm:redux@^3.0.5",
+      "redux-devtools": "npm:redux-devtools@^3.0.1",
+      "redux-logger": "npm:redux-logger@^2.3.1",
+      "redux-router": "npm:redux-router@^1.0.0-beta6",
+      "redux-thunk": "npm:redux-thunk@^1.0.3",
+      "validate.js": "npm:validate.js@^0.9.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "clean-css": "npm:clean-css@^3.4.9",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "name": "ToolboxSite",
+  "version": "1.0.0",
+  "description": "ToolboxSite site provides a collection of useful tools for daily programming and trouble shooting, as a web app",
+  "main": "app.js",
+  "scripts": {
+    "postinstall": "node node_modules/jspm/jspm.js install",
+    "bundle": "node node_modules/jspm/jspm.js bundle-sfx --minify app.js ../../gh-pages/bundle.js"
+  },
+  "repository": "https://github.com/djsxp/ToolboxSite",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jspm": "^0.16.39"
+  }
+}
