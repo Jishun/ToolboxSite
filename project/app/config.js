@@ -38,7 +38,7 @@ System.config({
     "react-motion-ui-pack": "npm:react-motion-ui-pack@0.5.2",
     "react-redux": "npm:react-redux@4.4.5",
     "react-router": "npm:react-router@1.0.3",
-    "react-validated-input": "npm:react-validated-input@0.0.3",
+    "react-validated-input": "npm:react-validated-input@0.0.8",
     "redux": "npm:redux@3.5.2",
     "redux-devtools": "npm:redux-devtools@3.3.1",
     "redux-logger": "npm:redux-logger@2.6.1",
@@ -303,6 +303,9 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "create-hash": "npm:create-hash@1.1.2",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0"
+    },
+    "npm:fbjs@0.6.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:fbjs@0.8.3": {
       "core-js": "npm:core-js@1.2.6",
@@ -604,8 +607,13 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "warning": "npm:warning@2.1.0"
     },
-    "npm:react-validated-input@0.0.3": {
-      "react": "npm:react@15.1.0"
+    "npm:react-validated-input@0.0.8": {
+      "react": "npm:react@0.14.8",
+      "validate.js": "npm:validate.js@0.9.0"
+    },
+    "npm:react@0.14.8": {
+      "fbjs": "npm:fbjs@0.6.1",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:react@15.1.0": {
       "fbjs": "npm:fbjs@0.8.3",
