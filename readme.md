@@ -1,12 +1,12 @@
 
 # ToolboxSite
   - Under construction
-  - Building a place to collect some handy utility code as little tools which can come to help during daily programming and trouble shooting
-  - The current approach is: try to implement every typical ideas with javascript and host it in [gh-pages branch](https://djsxp.github.io/ToolboxSite/)
+  - Building a place to collect some handy utilities code as little tools which can come to help during daily programming and trouble shooting
+  - The current approach is: Try to implement typical ideas with javascript and host it in [gh-pages branch](https://djsxp.github.io/ToolboxSite/)
 
 ## What's available for use
   1. Sql small data copy tool
-    - A small code logic to convert a select result string into an insert statement string.
+    - A small code logic to convert a SELECT statement result string into an INSERT statement string.
     - Just done the first step, only SQL server syntax available
     - Going to add other SQL syntax support
   2. Encoding and Decoding
