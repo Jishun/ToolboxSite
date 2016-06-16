@@ -5,7 +5,7 @@ export default function common(state = {loading : false, message: {}}, action){
     case LOADING:
       return Object.assign({}, state, {loading: true});
     case LOADED:
-      return Object.assign({}, state, {loading: false, payload: state.payload});
+      return Object.assign({}, state, {loading: false, payload: action.payload});
     case ERROR:
       return Object.assign({}, state, {message:{ level: 'error', text: action.payload}});
     case INFO:

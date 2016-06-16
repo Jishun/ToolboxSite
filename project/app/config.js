@@ -35,6 +35,7 @@ System.config({
     "react-dom": "npm:react-dom@15.1.0",
     "react-loader-advanced": "npm:react-loader-advanced@0.7.0",
     "react-localstorage": "npm:react-localstorage@0.2.9",
+    "react-markdown": "npm:react-markdown@2.3.0",
     "react-motion-ui-pack": "npm:react-motion-ui-pack@0.5.2",
     "react-redux": "npm:react-redux@4.4.5",
     "react-router": "npm:react-router@1.0.3",
@@ -226,6 +227,21 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:commonmark-react-renderer@4.1.4": {
+      "commonmark": "npm:commonmark@0.24.0",
+      "lodash.assign": "npm:lodash.assign@4.0.9",
+      "lodash.isplainobject": "npm:lodash.isplainobject@4.0.4",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "react": "npm:react@15.1.0",
+      "xss-filters": "npm:xss-filters@1.2.6"
+    },
+    "npm:commonmark@0.24.0": {
+      "entities": "npm:entities@1.1.1",
+      "mdurl": "npm:mdurl@1.0.1",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "string.prototype.repeat": "npm:string.prototype.repeat@0.2.0",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
+    },
     "npm:constants-browserify@0.0.1": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
@@ -299,6 +315,9 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "iconv-lite": "npm:iconv-lite@0.4.13"
     },
+    "npm:entities@1.1.1": {
+      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
+    },
     "npm:evp_bytestokey@1.0.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "create-hash": "npm:create-hash@1.1.2",
@@ -346,6 +365,9 @@ System.config({
       "string_decoder": "github:jspm/nodelibs-string_decoder@0.1.0",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
+    "npm:in-publish@2.0.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
@@ -381,6 +403,10 @@ System.config({
       "lodash.keys": "npm:lodash.keys@3.1.2",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:lodash.assign@4.0.9": {
+      "lodash.keys": "npm:lodash.keys@4.0.7",
+      "lodash.rest": "npm:lodash.rest@4.0.3"
+    },
     "npm:lodash.debounce@3.1.1": {
       "lodash._getnative": "npm:lodash._getnative@3.9.1"
     },
@@ -403,6 +429,9 @@ System.config({
     },
     "npm:lodash.pairs@3.0.1": {
       "lodash.keys": "npm:lodash.keys@3.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:lodash.rest@4.0.3": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:lodash@3.10.1": {
@@ -549,6 +578,14 @@ System.config({
     },
     "npm:react-localstorage@0.2.9": {
       "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:react-markdown@2.3.0": {
+      "commonmark": "npm:commonmark@0.24.0",
+      "commonmark-react-renderer": "npm:commonmark-react-renderer@4.1.4",
+      "in-publish": "npm:in-publish@2.0.0",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "react": "npm:react@15.1.0"
     },
     "npm:react-measure@0.3.5": {
       "lodash.debounce": "npm:lodash.debounce@3.1.1",

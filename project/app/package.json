@@ -17,6 +17,7 @@
       "react-dom": "npm:react-dom@^15.1.0",
       "react-loader-advanced": "npm:react-loader-advanced@^0.7.0",
       "react-localstorage": "npm:react-localstorage@^0.2.8",
+      "react-markdown": "npm:react-markdown@^2.3.0",
       "react-motion-ui-pack": "npm:react-motion-ui-pack@^0.5.2",
       "react-redux": "npm:react-redux@^4.0.6",
       "react-router": "npm:react-router@^1.0.0",
