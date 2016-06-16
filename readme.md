@@ -10,7 +10,7 @@
     - Just done the first step, only SQL server syntax available
     - Going to add other SQL syntax support
   2. Encoding and Decoding
-    - Provide a quick access to encode or decode a string using xml/html/url/base64/base32/csv etc..
+    - Provide a quick access to encoding or decodeing a string using xml/html/url/base64/base32/csv etc..
 
 ## Contribute
    - It'll be a big support if anyone would like to contribute an idea to this collection, by creating an issue here describing a requirement
