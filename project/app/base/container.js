@@ -22,7 +22,7 @@ export default class App extends Component {
          </Navbar.Header>
          <Nav pullRight>
            {topRoutes.map(route =><NavItem key={route.path} href={'#'+ route.path}>{route.name}</NavItem>)}
-           <NavItem href="https://github.com/djsxp/ToolboxSite" target="_blank">GitHub</NavItem>
+           <NavItem href="https://github.com/Jishun/ToolboxSite" target="_blank">GitHub</NavItem>
          </Nav>
        </Navbar>
        <div id="content_area" className="container">

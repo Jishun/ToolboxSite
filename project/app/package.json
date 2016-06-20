@@ -44,7 +44,7 @@
     "postinstall": "node node_modules/jspm/jspm.js install",
     "bundle": "node node_modules/jspm/jspm.js bundle-sfx --minify app.js ../../gh-pages/bundle.js"
   },
-  "repository": "https://github.com/djsxp/ToolboxSite",
+  "repository": "https://github.com/Jishun/ToolboxSite",
   "author": "",
   "license": "MIT",
   "dependencies": {
