@@ -24,7 +24,7 @@ export default class SqlCopy extends Component {
     return (
       <Grid>
         <br/>
-        <p>This little tool converts a string which copied from the SELECT output window of SQLServer management studio, and converts it into an SQL INSERT statement</p>
+        <p>This little tool takes a string copied from the SELECT output window of SQLServer management studio, and converts it into an SQL INSERT statement</p>
 
         <Row>
           <Col md={6}>
