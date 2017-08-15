@@ -13,7 +13,7 @@ export default class SqlCopy extends Component {
     let lines = e.target.value.split('\n');
     let outputData = 'INSERT INTO [TABLE] ([' + lines[0].replace(/\t/g, '], [') + '])\n'
     for (var i = 1; i < lines.length; i++) {
-      outputData += ((i == 1 ? 'SELECT ' : 'UNION ALL SELECT ') + lines[i].split('\t').map(a => a.toUpperCase() != 'NULL' ? `'${a}'` : a).join(', ') + '\n')
+      outputData += ((i == 1 ? 'SELECT ' : 'UNION ALL SELECT ') + lines[i].split('\t').map(a => a.toUpperCase() != 'NULL' ? `'${a}'` : a.replace("'", "''")).join(', ') + '\n')
     }
     this.setState({lines, outputData })
   }
