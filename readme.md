@@ -15,3 +15,8 @@
 ## Contribute
    - It'll be a big support if anyone would like to contribute an idea to this collection, by creating an issue here describing a requirement
    - Or send a pull request to me with a react-component which hosts an idea.
+
+## Local development note
+   - `node server.js`
+   - `http://localhost:8080/index.html`
+   - `git clone -b gh-pages --single-branch git@github.com:Jishun/ToolboxSite.git gh-pages`

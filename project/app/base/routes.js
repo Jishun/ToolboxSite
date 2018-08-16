@@ -8,6 +8,7 @@ import Home from '../containers/home'
 import App from './container'
 
 import SqlCopy from '../features/SqlCopy'
+import MarkdownEditor from '../features/MarkdownEditor'
 import Encode from '../features/Encode'
 
 
@@ -21,6 +22,7 @@ const routes = (<Route path='/' component={App}>
         <Route name="Encoding" path="/encode" component={Encoding}>
           <IndexRoute component={Encode}/>
           <Route name="TextEncode" path="/encode" component={Encode}/>
+          <Route name="Markdown" path="/markdown" component={MarkdownEditor}/>
         </Route>
         <Route name="External" path="/external" component={External}/>
     </Route>);

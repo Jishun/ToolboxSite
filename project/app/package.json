@@ -49,5 +49,9 @@
   "license": "MIT",
   "dependencies": {
     "jspm": "^0.16.39"
+  },
+  "devDependencies": {
+    "connect": "^3.6.6",
+    "serve-static": "^1.13.2"
   }
 }
