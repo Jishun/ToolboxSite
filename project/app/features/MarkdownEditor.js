@@ -27,7 +27,9 @@ export default class MarkdownEditor extends Component {
 
         <Row>
           <Col md={6}>
-            <Input type="textarea" placeholder={"Type your markdown"} style={{height: 600}} instance={this.state} propertyKey="inputData" onChange={this.onInputChange.bind(this)}></Input>
+            <Input type="textarea" placeholder={"Type your markdown"} style={{height: 600}} instance={this.state}
+              oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
+              propertyKey="inputData" onChange={this.onInputChange.bind(this)}></Input>
           </Col>
           <Col md={6}>
             <ReactMarkdown source={this.state.inputData} />
