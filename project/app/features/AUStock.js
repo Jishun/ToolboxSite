@@ -29,6 +29,7 @@ export default class AUStock extends Component {
       "Salary": 18269.23,
       "SellingPrice": 60.00,
       "SellingCount": 5000,
+      "SellOnDate": "2019-06-06",
       "Stocks": [
         {"PurchasePrice": 18.73, "Currency": 1, "Count": 139, "Date": "2016-07-29"},
         {"PurchasePrice": 18.10, "Currency": 1, "Count": 249, "Date": "2017-3-31"},
@@ -57,11 +58,16 @@ export default class AUStock extends Component {
       if (selling > 0) {
         var thisSelling = stock.Count > selling ? selling : stock.Count;
         count += thisSelling;
+        var profit = round((input.SellingPrice - (stock.PurchasePrice * stock.Currency))*thisSelling);
+        var date = new Date(input.SellOnDate);
+        var diffTime = Math.abs(date.getTime() - new Date(stock.Date).getTime());
+        var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
         stockBreakdowns.push({
           Purchased: stock.PurchasePrice,
           Currency: stock.Currency,
           Sold: thisSelling,
-          Profit: round((input.SellingPrice - (stock.PurchasePrice * stock.Currency))*thisSelling)
+          Profit: profit,
+          Taxable: diffDays > 365 ? profit * 0.5 : profit
         });
       }else {
         break;
@@ -70,7 +76,8 @@ export default class AUStock extends Component {
     count = stockBreakdowns.reduce((total, current) => total += current.Sold, 0 );
     var totalStockValue = input.SellingPrice * count;
     var stockProfit = stockBreakdowns.reduce((total, current) => total += current.Profit, 0 );
-    var totalIncome = stockProfit + input.Salary;
+    var stockProfitTaxable = stockBreakdowns.reduce((total, current) => total += current.Taxable, 0 ) ;
+    var totalIncome = stockProfitTaxable + input.Salary;
     var taxBreakdowns = this.calculateTax(input.TaxBrackets, totalIncome);
     var adjustmentsBreakdowns = this.calculateTax(input.TaxBrackets, input.Salary);
     var totalTax = taxBreakdowns.reduce((total, current) => total+= current.Tax, 0);
@@ -86,6 +93,7 @@ export default class AUStock extends Component {
       StockTax: round(totalTax - adjustmentsTax),
       CountSold: round(count),
       Profit: round(stockProfit),
+      TaxableProfit: round(stockProfitTaxable),
       StockBreakdowns: stockBreakdowns,
       TaxBreakdowns : taxBreakdowns,
     }]});
@@ -121,9 +129,9 @@ export default class AUStock extends Component {
             <thead>
               <tr>
                 <td>Input</td>
-                <td>Total</td>
+                <td>Annual Total</td>
                 <td>Stocks</td>
-                <td>- Pruchased - | --- Sold --- | -- Profit -- </td>
+                <td> Purchased | Selling | -- Profit / Taxable -- </td>
                 <td>Taxes</td>
               </tr>
             </thead>
@@ -133,7 +141,7 @@ export default class AUStock extends Component {
                     <td>
                       <Table bordered style={tableStyle}>
                         <tbody>
-                          <tr><td>Sell At</td><td>${o.SellingPrice}</td></tr>
+                          <tr><td>Sell At</td><td>${o.SellingPrice} ({o.SellOnDate})</td></tr>
                           <tr><td>Sell</td><td>{o.Sold} / {o.Total}</td></tr>
                           <tr><td>Salary</td><td>${o.Salary}</td></tr>
                           <tr><td>Cost</td><td>${round(o.TotalStockValue - o.Profit)}</td></tr>
@@ -163,7 +171,7 @@ export default class AUStock extends Component {
                     <td>
                       <Table bordered style={tableStyle}>
                         <tbody>
-                          {o.StockBreakdowns.map((s, ii) => <tr key={ii}><td>${s.Purchased}{s.Currency == 1 ? '' : ` x ${s.Currency}`}</td><td>{s.Sold}</td><td>${s.Profit}</td></tr>)}
+                          {o.StockBreakdowns.map((s, ii) => <tr key={ii}><td>${s.Purchased}{s.Currency == 1 ? '' : ` x ${s.Currency}`}</td><td>{s.Sold}</td><td>${s.Profit} / ${s.Taxable} </td></tr>)}
                         </tbody>
                       </Table>
                     </td>
