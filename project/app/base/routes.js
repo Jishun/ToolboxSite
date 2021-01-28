@@ -12,6 +12,7 @@ import AUStock from '../features/AUStock'
 import SqlCopy from '../features/SqlCopy'
 import MarkdownEditor from '../features/MarkdownEditor'
 import Encode from '../features/Encode'
+import Equation from '../features/Equation'
 
 
 const routes = (<Route path='/' component={App}>
@@ -29,6 +30,7 @@ const routes = (<Route path='/' component={App}>
         <Route name="Calculators" path="/austock" component={Calculators}>
           <IndexRoute component={AUStock}/>
           <Route name="AU Stock" path="/austock" component={AUStock}/>
+          <Route name="Equation" path="/equation" component={Equation}/>
         </Route>
         <Route name="External" path="/external" component={External}/>
     </Route>);

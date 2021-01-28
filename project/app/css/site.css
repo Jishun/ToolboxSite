@@ -55,7 +55,7 @@ html,body {
 
 /*.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
 	 margin:-.2px; /* hack adjust for wrapping */
-}*/
+/*}*/
 
 .container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
 	width:100%;

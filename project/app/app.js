@@ -14,8 +14,8 @@ import createLogger from 'redux-logger'
 
 import {initValidationSettings} from './base/validation'
 
-import './css/bootstrap.min.css!'
-import './css/site.css!'
+import './css/bootstrap.min.css'
+import './css/site.css'
 
 initValidationSettings();
 
