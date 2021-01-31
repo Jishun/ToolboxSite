@@ -7,7 +7,7 @@ module.exports = {
   devtool: "source-map",
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../../gh-pages'),
     sourceMapFilename: "[name].js.map"
   },
   devServer: {
