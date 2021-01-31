@@ -4,9 +4,11 @@ module.exports = {
   entry: './app.js',
   mode: 'development',
   //stats: 'verbose',
+  devtool: "source-map",
   output: {
     filename: 'app.js',
     path: path.resolve(__dirname, 'dist'),
+    sourceMapFilename: "[name].js.map"
   },
   devServer: {
     stats: "minimal",

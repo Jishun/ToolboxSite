@@ -1,0 +1,20 @@
+statement: | 
+  Find all values of k for which the equation has two real solutions.
+      \($ax^2 + $bx - (k - $c) = 0\) 
+  Write your answer starting with k, followed by an equal sign or inequality symbol 
+  (for example, \(k < 5\) ), reduce all fractions.
+answer : |
+  \(k < $d\)
+where: 
+  a: 
+    default: 7
+    js: "Math.floor((Math.random() * 10) + 1)"
+    constraint: "a != 0"
+  b: 
+    default: 4
+    js: "Math.floor((Math.random() * 10) + 1)"
+  c: 
+    default: 3
+    js: "Math.floor((Math.random() * 10) + 1)"
+  d: 
+    math: "c - b^2/4a"
